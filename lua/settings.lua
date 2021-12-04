@@ -1,83 +1,75 @@
 -- refer to defaults at https://neovim.io/doc/user/vim_diff.html
 
--- Map Leader
-vim.g.mapleader = ' '
+-----------------------------------------------------------
+-- Neovim settings
+-----------------------------------------------------------
 
-local indent = 2
+-----------------------------------------------------------
+-- Neovim API aliases
+-----------------------------------------------------------
+--local map = vim.api.nvim_set_keymap  -- set global keymap
+local cmd = vim.cmd     				-- execute Vim commands
+local exec = vim.api.nvim_exec 	-- execute Vimscript
+local fn = vim.fn       				-- call Vim functions
+local g = vim.g         				-- global variables
+local opt = vim.opt         		-- global/buffer/windows-scoped options
 
--- Always show tabs
-vim.opt.showtabline = 2
+-----------------------------------------------------------
+-- General
+-----------------------------------------------------------
+g.mapleader = ','             -- change leader to a comma
+g.onedark_terminal_italics = 2
 
--- No swapfile
-vim.opt.swapfile = false
+opt.mouse = 'a'               -- enable mouse support
+opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
+opt.swapfile = false          -- don't use swapfile
+opt.scrolloff = 8             -- keep cursor centered vertically on the screen
 
--- no tilde files
-vim.opt.writebackup = false
+-----------------------------------------------------------
+-- Neovim UI
+-----------------------------------------------------------
+opt.number = true             -- show line number
+opt.showmatch = true          -- highlight matching parenthesis
+opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
+opt.splitright = true         -- vertical split to the right
+opt.splitbelow = true         -- orizontal split to the bottom
+opt.ignorecase = true         -- ignore case letters when search
+opt.smartcase = true          -- ignore lowercase for the whole pattern
+opt.linebreak = true          -- wrap on word boundary
+opt.signcolumn = "yes"        -- always show sign column
+opt.background = 'dark'       -- apply the color set for dark screens
 
--- No .bak files
-vim.opt.backup = false
+-- remove whitespace on save
+cmd [[au BufWritePre * :%s/\s\+$//e]]
 
--- Put new windows below current
-vim.opt.splitbelow = true
+-----------------------------------------------------------
+-- Memory, CPU
+-----------------------------------------------------------
+opt.lazyredraw = true     -- faster scrolling
+opt.updatetime = 300      -- faster completion (4000ms default)
+opt.undofile = true       -- Save undo history
+opt.writebackup = false   -- no tilde files
+opt.backup = false        -- No .bak files
 
--- Put new windows right of current
-vim.opt.splitright = true
+-----------------------------------------------------------
+-- Colorscheme
+-----------------------------------------------------------
+opt.termguicolors = true      -- enable 24-bit RGB colors
+g.onedark_transparent_background = true
+g.onedark_italic_comment = true
+cmd [[colorscheme onedark]]
 
--- Convert new tabs to spaces
-vim.opt.expandtab = true
+-----------------------------------------------------------
+-- Tabs, indent
+-----------------------------------------------------------
+opt.expandtab = true      -- use spaces instead of tabs
+opt.shiftwidth = 2        -- shift 4 spaces when tab
+opt.tabstop = 2           -- 1 tab == 2 spaces
+opt.smartindent = true    -- autoindent new lines
+opt.showtabline = 2       -- always show tabs
+opt.breakindent = true    -- enable break indent
 
--- Width of a hard tabstop measured in "spaces"
-vim.opt.tabstop = indent
-
--- Indent to correspond to a single tab
-vim.opt.shiftwidth = indent
-
--- Sets the number of columns for a TAB
-vim.opt.softtabstop = indent
-
--- Insert indents automatically
-vim.opt.smartindent = true
-
--- True color support
-vim.opt.termguicolors = true
-
---Apply the color set for dark screens
-vim.opt.background = 'dark'
-
--- Make line numbers default
-vim.opt.number = true
-
--- Enable mouse mode
-vim.opt.mouse = 'a'
-
--- Enable break indent
-vim.opt.breakindent = true
-
--- Save undo history
-vim.opt.undofile = true
-
--- Use system clipboard
-vim.opt.clipboard = "unnamedplus"
-
--- Case insensitive searching UNLESS /C or capital in search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- faster completion (4000ms default)
-vim.opt.updatetime = 300
-
--- Set colorscheme (order is important here)
-vim.opt.termguicolors = true
-
--- Assinging variable
-vim.g.onedark_terminal_italics = 2
-
-vim.opt.scrolloff = 8
-
--- Always show the sign column
-vim.opt.signcolumn = "yes"
-
-vim.cmd [[colorscheme onedark]]
-
--- Set completeopt to have a better completion experience
-vim.opt.completeopt = 'menuone,noselect'
+-----------------------------------------------------------
+-- Autocompletion
+-----------------------------------------------------------
+opt.completeopt = 'menuone,noselect'     -- insert mode completion options
