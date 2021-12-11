@@ -9,16 +9,22 @@
 -----------------------------------------------------------
 --local map = vim.api.nvim_set_keymap  -- set global keymap
 local cmd = vim.cmd     				-- execute Vim commands
-local exec = vim.api.nvim_exec 	-- execute Vimscript
+local api = vim.api     				-- execute Vim commands
 local fn = vim.fn       				-- call Vim functions
 local g = vim.g         				-- global variables
 local opt = vim.opt         		-- global/buffer/windows-scoped options
 
+local exec = api.nvim_exec
+
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-g.mapleader = ','             -- change leader to a comma
-g.onedark_terminal_italics = 2
+----Remap space as leader key
+api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
+g.mapleader = ' '
+g.gruvbox_sign_column = 'dark0'
+g.maplocalleader = ' '
+g.nvim_tree_respect_buf_cwd = 1
 
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
@@ -29,6 +35,7 @@ opt.scrolloff = 8             -- keep cursor centered vertically on the screen
 -- Neovim UI
 -----------------------------------------------------------
 opt.number = true             -- show line number
+opt.relativenumber = true     -- show relative numbers
 opt.showmatch = true          -- highlight matching parenthesis
 opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
 opt.splitright = true         -- vertical split to the right
@@ -55,9 +62,7 @@ opt.backup = false        -- No .bak files
 -- Colorscheme
 -----------------------------------------------------------
 opt.termguicolors = true      -- enable 24-bit RGB colors
-g.onedark_transparent_background = true
-g.onedark_italic_comment = true
-cmd [[colorscheme onedark]]
+cmd [[colorscheme gruvbox]]
 
 -----------------------------------------------------------
 -- Tabs, indent

@@ -20,8 +20,8 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'glepnir/lspsaga.nvim'
 
-  -- comment plugin for neovim
-  Plug 'numToStr/Comment.nvim'
+  -- The fastest Neovim colorizer.
+  Plug 'norcalli/nvim-colorizer.lua'
 
   -- motion plugin
   Plug 'ggandor/lightspeed.nvim'
@@ -31,9 +31,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
   -- renaming UI for Neovim, writen in Lua.
   Plug('filipdutescu/renamer.nvim', { branch = 'master' })
-
-  -- dashboard
-  Plug 'goolord/alpha-nvim'
 
   -- autocomplete
   Plug 'hrsh7th/nvim-cmp'
@@ -48,6 +45,21 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'windwp/nvim-autopairs'
 
   -- colorschemes
-  Plug 'navarasu/onedark.nvim'
+  Plug 'gruvbox-community/gruvbox'
+
+  Plug 'akinsho/bufferline.nvim'
+
+  Plug 'kyazdani42/nvim-tree.lua'
+
+  -- Git integration for buffers
+  Plug 'lewis6991/gitsigns.nvim'
+
+  Plug('echasnovski/mini.nvim', { branch = 'stable' })
+
+  Plug 'AckslD/nvim-neoclip.lua'
+
+  Plug 'TimUntersberger/neogit'
+
+  Plug 'wfxr/minimap.vim'
 
 vim.call('plug#end')

@@ -8,8 +8,8 @@
 local lualine = require('lualine')
 
 lualine.setup({
-  optons = {
-    theme = 'ayu_mirage',
-    icons_enabled = false,
+  options = {
+    theme = 'gruvbox',
+    icons_enabled = true,
   }
 })

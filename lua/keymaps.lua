@@ -11,14 +11,13 @@ local cmd = vim.cmd
 -- Neovim shortcuts:
 -----------------------------------------------------------
 
--- Telescope find files
-map('n', '<C-p>', '<cmd>Telescope find_files<CR>', default_opts)
+-- move around splits using Ctrl + {h,j,k,l}
+map('n', '<C-h>', '<C-w>h', default_opts)
+map('n', '<C-j>', '<C-w>j', default_opts)
+map('n', '<C-k>', '<C-w>k', default_opts)
+map('n', '<C-l>', '<C-w>l', default_opts)
 
--- Telescope search
-map('n', '<C-f>', '<cmd>Telescope live_grep<CR>', default_opts)
+-- tab between buffers
+map('n', '<tab>', ':b#<cr>', default_opts)
 
--- Telescope file browser
-map('n', '<C-b>', '<cmd>Telescope file_browser<CR>', default_opts)
-
--- Telescope file browser
-map('n', '<C-leader>', '<cmd>Telescope buffers<CR>', default_opts)
+map('n', '<leader>g', ':Neogit<cr>', default_opts)
