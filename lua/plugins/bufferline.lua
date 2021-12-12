@@ -7,6 +7,7 @@
 
 require('bufferline').setup({
   options = {
+    enforce_regular_tabs = true,
     show_close_icon = false,
     show_buffer_icons = false,
     show_buffer_close_icons = false,
@@ -18,24 +19,6 @@ require('bufferline').setup({
         highlight = "Directory",
         text_align = "left"
       },
-    },
-  },
-  highlights = {
-    buffer_selected = {
-      guifg = "#282828",
-      guibg = "#458588",
-    },
-    fill = {
-      guifg = "#fffff0",
-      guibg = "#282828"
-    },
-    separator = {
-      guibg = "#458588",
-      guibg = "#458588"
-    },
-    indicator_selected = {
-      guifg = "#458588",
-      guibg = "#458588"
     },
   },
 })

@@ -22,9 +22,12 @@ local exec = api.nvim_exec
 ----Remap space as leader key
 api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 g.mapleader = ' '
-g.gruvbox_sign_column = 'dark0'
 g.maplocalleader = ' '
+
 g.nvim_tree_respect_buf_cwd = 1
+
+g.gruvbox_italic_functions = true
+g.gruvbox_transparent = true
 
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
@@ -62,7 +65,7 @@ opt.backup = false        -- No .bak files
 -- Colorscheme
 -----------------------------------------------------------
 opt.termguicolors = true      -- enable 24-bit RGB colors
-cmd [[colorscheme gruvbox]]
+cmd [[colorscheme gruvbox-flat]]
 
 -----------------------------------------------------------
 -- Tabs, indent

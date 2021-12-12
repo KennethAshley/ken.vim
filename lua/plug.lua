@@ -26,9 +26,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- motion plugin
   Plug 'ggandor/lightspeed.nvim'
 
-  -- Status line
-  Plug 'nvim-lualine/lualine.nvim'
-
   -- renaming UI for Neovim, writen in Lua.
   Plug('filipdutescu/renamer.nvim', { branch = 'master' })
 
@@ -41,25 +38,25 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'L3MON4D3/LuaSnip'
   Plug 'saadparwaiz1/cmp_luasnip'
 
-  -- autopair
-  Plug 'windwp/nvim-autopairs'
+  -- Colorscheme
+  Plug 'eddyekofo94/gruvbox-flat.nvim'
 
-  -- colorschemes
-  Plug 'gruvbox-community/gruvbox'
-
-  Plug 'akinsho/bufferline.nvim'
-
+  -- File tree
   Plug 'kyazdani42/nvim-tree.lua'
 
   -- Git integration for buffers
   Plug 'lewis6991/gitsigns.nvim'
 
+  -- Useful helpers
   Plug('echasnovski/mini.nvim', { branch = 'stable' })
 
+  -- Clipboard history
   Plug 'AckslD/nvim-neoclip.lua'
 
+  -- Git
   Plug 'TimUntersberger/neogit'
 
+  -- Minimap
   Plug 'wfxr/minimap.vim'
 
 vim.call('plug#end')
