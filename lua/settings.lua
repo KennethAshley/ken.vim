@@ -51,9 +51,9 @@ opt.background = 'dark'       -- apply the color set for dark screens
 
 -- remove whitespace on save
 cmd [[au BufWritePre * :%s/\s\+$//e]]
-cmd [[hi NeogitNotificationInfo guifg=#80ff95]]
-cmd [[hi NeogitNotificationWarning guifg=#fff454]]
-cmd [[hi NeogitNotificationError guifg=#c44323]]
+cmd [[hi NeogitNotificationInfo guifg=#458588]]
+cmd [[hi NeogitNotificationWarning guifg=#d79921]]
+cmd [[hi NeogitNotificationError guifg=#cc241d]]
 
 -----------------------------------------------------------
 -- Memory, CPU
