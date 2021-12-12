@@ -12,25 +12,6 @@
 --- setup function:
 --- https://github.com/kyazdani42/nvim-tree.lua#setup
 --- See: `help NvimTree`
-local g = vim.g
-
-g.nvim_tree_root_folder_modifier = ':~'
-g.nvim_tree_git_hl = 1
-g.nvim_tree_indent_markers = 1
-g.nvim_tree_add_trailing = 1
-g.nvim_tree_highlight_opened_files = 1
--- g.NvimTreeSpecialFile = '#ff0000'
-g.nvim_tree_icons = {
-  default = '',
-  symlink = '',
-}
-
-g.nvim_tree_show_icons = {
-  git = 1,
-  folders = 0,
-  files = 0,
-  folder_arrows = 1
-}
 
 local tree = require('nvim-tree')
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
@@ -59,8 +40,3 @@ tree.setup({
   }
 })
 
-local map = vim.api.nvim_set_keymap
-local default_opts = { noremap = true, silent = true }
-local cmd = vim.cmd
-
-map('n', '<C-b>', ':NvimTreeToggle<CR>', default_opts)

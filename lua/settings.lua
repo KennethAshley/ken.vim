@@ -16,18 +16,31 @@ local opt = vim.opt         		-- global/buffer/windows-scoped options
 
 local exec = api.nvim_exec
 
+----Remap space as leader key
+api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
+
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-----Remap space as leader key
-api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 g.mapleader = ' '
 g.maplocalleader = ' '
 
-g.nvim_tree_respect_buf_cwd = 1
+-- g.nvim_tree_respect_buf_cwd = 1
 
 g.gruvbox_italic_functions = true
 g.gruvbox_transparent = true
+
+g.nvim_tree_root_folder_modifier = ':~'
+g.nvim_tree_git_hl = 1
+g.nvim_tree_indent_markers = 1
+g.nvim_tree_add_trailing = 1
+
+g.nvim_tree_show_icons = {
+  git = 0,
+  folders = 1,
+  files = 0,
+  folder_arrows = 1
+}
 
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
@@ -51,9 +64,10 @@ opt.background = 'dark'       -- apply the color set for dark screens
 
 -- remove whitespace on save
 cmd [[au BufWritePre * :%s/\s\+$//e]]
-cmd [[hi NeogitNotificationInfo guifg=#458588]]
-cmd [[hi NeogitNotificationWarning guifg=#d79921]]
-cmd [[hi NeogitNotificationError guifg=#cc241d]]
+
+cmd [[au VimEnter * highlight NeogitNotificationInfo guifg=#83a598]]
+cmd [[au VimEnter * highlight NeogitNotificationWarning guifg=#fe8019]]
+cmd [[au VimEnter * highlight NotificationError guifg=#fb4934]]
 
 -----------------------------------------------------------
 -- Memory, CPU

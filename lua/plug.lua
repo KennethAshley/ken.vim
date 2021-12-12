@@ -56,7 +56,4 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- Git
   Plug 'TimUntersberger/neogit'
 
-  -- Minimap
-  Plug 'wfxr/minimap.vim'
-
 vim.call('plug#end')
