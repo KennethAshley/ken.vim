@@ -37,6 +37,6 @@ map('n', '<leader>g', ':Neogit<cr>', default_opts)
 -- Closing buffers
 map('n', '<leader>q', ':lua MiniBufremove.delete()<cr>', default_opts)
 
-map('n', '<leader>c', ':nohlsearch<cr>:call minimap#vim#ClearColorSearch()<cr>', default_opts)
+map('n', '<leader>c', ':nohlsearch<cr>', default_opts)
 
 map('n', '<C-b>', ':NvimTreeToggle<CR>', default_opts)

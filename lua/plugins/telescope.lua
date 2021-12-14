@@ -112,14 +112,7 @@ telescope.setup({
       }
     }
   },
-  extensions = {
-    neoclip = {
-      theme = "dropdown"
-    },
-  },
 })
-
-telescope.load_extension('neoclip')
 
 local map_options = { noremap = true, silent = true, }
 local map = vim.api.nvim_set_keymap

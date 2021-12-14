@@ -18,11 +18,15 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local view = require('nvim-tree.view')
 
 tree.setup({
+  open_on_setup = true,
   update_focused_file = {
     enable = true,
     ignore_list = {'.git', 'node_modules', '.cache', 'plugged', '.github'},
   },
-  filters = { dotfiles = true },
+  filters = {
+    dotfiles = true,
+    custom = { '.git', 'node_modules', '.cache', '.bin' },
+  },
   view = {
     auto_resize = true,
     mappings = {

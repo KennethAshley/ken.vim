@@ -1,19 +1,19 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
-  -- lua functions.
+  -- Lua functions.
   Plug 'nvim-lua/plenary.nvim'
 
   -- Nvim Treesitter configurations and abstraction layer
   Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 
-  -- fuzzy finder
+  -- Find, Filter, Preview, Pick. All lua, all the time.
   Plug 'nvim-telescope/telescope.nvim'
 
   -- Indent guides for Neovim
   Plug 'lukas-reineke/indent-blankline.nvim'
 
-  -- icons
+  -- Icons
   Plug 'kyazdani42/nvim-web-devicons'
 
   -- LSP
@@ -23,13 +23,10 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- The fastest Neovim colorizer.
   Plug 'norcalli/nvim-colorizer.lua'
 
-  -- motion plugin
+  -- Motion plugin
   Plug 'ggandor/lightspeed.nvim'
 
-  -- renaming UI for Neovim, writen in Lua.
-  Plug('filipdutescu/renamer.nvim', { branch = 'master' })
-
-  -- autocomplete
+  -- Autocomplete
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-path'
@@ -49,9 +46,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
   -- Useful helpers
   Plug('echasnovski/mini.nvim', { branch = 'stable' })
-
-  -- Clipboard history
-  Plug 'AckslD/nvim-neoclip.lua'
 
   -- Git
   Plug 'TimUntersberger/neogit'
