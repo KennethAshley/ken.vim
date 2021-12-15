@@ -25,8 +25,6 @@ api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 g.mapleader = ' '
 g.maplocalleader = ' '
 
--- g.nvim_tree_respect_buf_cwd = 1
-
 g.gruvbox_italic_functions = true
 g.gruvbox_transparent = true
 
