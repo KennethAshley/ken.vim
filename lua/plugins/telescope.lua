@@ -104,10 +104,10 @@ telescope.setup({
       theme = "dropdown",
       mappings = {
         n = {
-          ['<c-w>'] = actions.delete_buffer,
+          ['<leader>q'] = actions.delete_buffer,
         },
         i = {
-          ['<c-w>'] = actions.delete_buffer,
+          ['<leader>q'] = actions.delete_buffer,
         }
       }
     }

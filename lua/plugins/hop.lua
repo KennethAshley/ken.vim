@@ -1,6 +1,8 @@
 -----------------------------------------------------------
--- Motion plugin
+-- Neovim motions on speed!
 -----------------------------------------------------------
 
--- Plugin: lightspeed.nvim
--- https://github.com/ggandor/lightspeed.nvim
+-- Plugin: hop.nvim
+-- https://github.com/phaazon/hop.nvim
+
+require('hop').setup()

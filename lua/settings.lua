@@ -58,6 +58,7 @@ opt.smartcase = true          -- ignore lowercase for the whole pattern
 opt.linebreak = true          -- wrap on word boundary
 opt.signcolumn = "yes"        -- always show sign column
 opt.background = 'dark'       -- apply the color set for dark screens
+opt.cursorline = true         -- apply the color set for dark screens
 
 -- remove whitespace on save
 cmd [[au BufWritePre * :%s/\s\+$//e]]

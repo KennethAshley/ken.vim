@@ -23,9 +23,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- The fastest Neovim colorizer.
   Plug 'norcalli/nvim-colorizer.lua'
 
-  -- Motion plugin
-  Plug 'ggandor/lightspeed.nvim'
-
   -- Autocomplete
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-buffer'
@@ -45,9 +42,14 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug 'lewis6991/gitsigns.nvim'
 
   -- Useful helpers
-  Plug('echasnovski/mini.nvim', { branch = 'stable' })
+    -- Stable
+  -- Plug('echasnovski/mini.nvim', { branch = 'stable' })
+    -- Development
+  Plug 'echasnovski/mini.nvim'
 
   -- Git
   Plug 'TimUntersberger/neogit'
+
+  Plug 'phaazon/hop.nvim'
 
 vim.call('plug#end')

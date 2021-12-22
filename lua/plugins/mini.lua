@@ -5,6 +5,12 @@
 -- Plugin: mini.nvim
 -- https://github.com/echasnovski/mini.nvim
 
+-- Start screen
+-- require('mini.starter').setup()
+
+-- Word under cursor
+-- -- -- -- -- -- -- -- require('mini.jump').setup()
+
 -- Word under cursor
 require('mini.cursorword').setup()
 
