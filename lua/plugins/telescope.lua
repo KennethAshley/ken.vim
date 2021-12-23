@@ -137,7 +137,7 @@ end
 
 
 map_builtin('<C-p>', 'find_files')
-map_builtin('<C-space>', 'buffers')
+map_builtin('<leader>b', 'buffers')
 map_builtin('<C-f>', 'live_grep')
 
 map('n', '<leader>p', ':Telescope neoclip<cr>', map_options)

@@ -52,4 +52,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
   Plug 'phaazon/hop.nvim'
 
+  -- Terminal
+  Plug 'akinsho/toggleterm.nvim'
 vim.call('plug#end')
