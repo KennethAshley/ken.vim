@@ -5,11 +5,8 @@
 -- Plugin: mini.nvim
 -- https://github.com/echasnovski/mini.nvim
 
--- Start screen
--- require('mini.starter').setup()
-
 -- Word under cursor
--- -- -- -- -- -- -- -- require('mini.jump').setup()
+require('mini.jump').setup()
 
 -- Word under cursor
 require('mini.cursorword').setup()
@@ -22,7 +19,7 @@ require('mini.pairs').setup()
 
 -- Fast and familiar per-line code commenting.
 require('mini.comment').setup()
---
+
 -- Fast and familiar per-line code commenting.
 require('mini.tabline').setup()
 

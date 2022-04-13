@@ -39,6 +39,7 @@ g.nvim_tree_show_icons = {
   folder_arrows = 1,
 }
 
+opt.title = true
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
 opt.swapfile = false          -- don't use swapfile

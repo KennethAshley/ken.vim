@@ -16,29 +16,32 @@
 local tree = require('nvim-tree')
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local view = require('nvim-tree.view')
+local lib = require('nvim-tree.lib')
 
 tree.setup({
   open_on_setup = true,
+  update_to_buf_dir = { enable = false },
   update_focused_file = {
     enable = true,
     ignore_list = {'.git', 'node_modules', '.cache', 'plugged', '.github'},
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
     custom = { '.git', 'node_modules', '.cache', '.bin' },
   },
   view = {
     auto_resize = true,
     mappings = {
       list = {
-        { key='h'   , cb=tree_cb('close_node')},
-        { key='l'   , cb=tree_cb("edit") },
-        { key='o'   , cb=tree_cb("edit") },
-        { key='<cr>', cb=tree_cb("edit") },
-        { key='I'   , cb=tree_cb("toggle_ignored") },
-        { key='H'   , cb=tree_cb("toggle_dotfiles") },
-        { key='R'   , cb=tree_cb("refresh") },
-        { key='='   , cb=tree_cb("preview") }
+        { key='h'   , action = 'close_node'},
+        { key='l'   , action = 'edit' },
+        { key='o'   , action = 'edit' },
+        { key='<cr>', action = 'edit' },
+        { key='I'   , action = 'toggle_ignored' },
+        { key='H'   , action = 'toggle_dotfiles' },
+        { key='R'   , action = 'refresh' },
+        { key='='   , action = 'preview' },
+        { key='X'   , action = 'collapse_all', action_cb = lib.collapse_all },
       }
     }
   }

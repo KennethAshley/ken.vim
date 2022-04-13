@@ -10,8 +10,8 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- Find, Filter, Preview, Pick. All lua, all the time.
   Plug 'nvim-telescope/telescope.nvim'
 
-  -- Indent guides for Neovim
-  Plug 'lukas-reineke/indent-blankline.nvim'
+  -- Plug 'phaazon/hop.nvim'
+  Plug 'ggandor/lightspeed.nvim'
 
   -- Icons
   Plug 'kyazdani42/nvim-web-devicons'
@@ -43,15 +43,13 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
 
   -- Useful helpers
     -- Stable
-  -- Plug('echasnovski/mini.nvim', { branch = 'stable' })
-    -- Development
-  Plug 'echasnovski/mini.nvim'
+  Plug('echasnovski/mini.nvim', { branch = 'stable' })
 
   -- Git
-  Plug 'TimUntersberger/neogit'
-
-  Plug 'phaazon/hop.nvim'
+  -- Plug 'TimUntersberger/neogit'
+  Plug 'kdheepak/lazygit.nvim'
 
   -- Terminal
   Plug 'akinsho/toggleterm.nvim'
+
 vim.call('plug#end')
