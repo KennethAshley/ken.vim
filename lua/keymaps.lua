@@ -32,7 +32,7 @@ map('i', '!', '!<c-g>u', default_opts)
 map('i', '?', '?<c-g>u', default_opts)
 
 -- Neogit
-map('n', '<leader>g', ':Neogit<cr>', default_opts)
+map('n', '<leader>g', ':LazyGit<cr>', default_opts)
 
 -- Closing buffers
 -- map('n', '<C-BS>', ':bdelete<cr>', default_opts)
