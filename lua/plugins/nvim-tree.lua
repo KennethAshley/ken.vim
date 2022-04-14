@@ -44,6 +44,11 @@ tree.setup({
         { key='X'   , action = 'collapse_all', action_cb = lib.collapse_all },
       }
     }
+  },
+  renderer = {
+    indent_markers = {
+      enable = true
+    }
   }
 })
 
