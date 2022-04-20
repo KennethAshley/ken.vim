@@ -10,6 +10,8 @@ local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local custom_actions = {}
 
+telescope.load_extension('projects')
+
 function custom_actions._multiopen(prompt_bufnr, open_cmd)
   local picker = action_state.get_current_picker(prompt_bufnr)
   local num_selections = #picker:get_multi_selection()
@@ -60,6 +62,11 @@ function custom_actions.multi_selection_open(prompt_bufnr)
 end
 
 telescope.setup({
+  update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true
+  },
   defaults = {
     mappings = {
       i = {
@@ -140,6 +147,6 @@ map_builtin('<C-p>', 'find_files')
 map_builtin('<C-space>', 'buffers')
 map_builtin('<C-f>', 'live_grep')
 
-map('n', '<leader>p', ':Telescope neoclip<cr>', map_options)
+map('n', '<leader>p', ':Telescope projects<cr>', map_options)
 
 return helpers

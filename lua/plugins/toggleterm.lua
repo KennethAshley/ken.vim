@@ -6,6 +6,6 @@
 -- https://github.com/akinsho/toggleterm.nvim
 
 require("toggleterm").setup({
-  open_mapping = [[<leader>o]],
+  open_mapping = [[<leader>t]],
   insert_mappings = false,
 })

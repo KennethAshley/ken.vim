@@ -52,4 +52,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- Terminal
   Plug 'akinsho/toggleterm.nvim'
 
+  -- Project Management
+  Plug 'ahmedkhalf/project.nvim'
+
 vim.call('plug#end')

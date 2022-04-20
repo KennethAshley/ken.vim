@@ -38,6 +38,8 @@ g.nvim_tree_show_icons = {
   folder_arrows = 1,
 }
 
+g.nvim_tree_respect_buf_cwd = 1
+
 opt.title = true
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
