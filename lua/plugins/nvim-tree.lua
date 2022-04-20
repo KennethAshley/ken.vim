@@ -21,6 +21,7 @@ local lib = require('nvim-tree.lib')
 tree.setup({
   open_on_setup = true,
   update_to_buf_dir = { enable = false },
+  update_cwd = true,
   update_focused_file = {
     enable = true,
     ignore_list = {'.git', 'node_modules', '.cache', 'plugged', '.github'},
