@@ -142,7 +142,6 @@ helpers.find_files_in_directory_of_buffer = function()
     })
 end
 
-
 map_builtin('<C-p>', 'find_files')
 map_builtin('<C-space>', 'buffers')
 map_builtin('<C-f>', 'live_grep')

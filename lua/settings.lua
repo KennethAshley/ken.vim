@@ -7,7 +7,6 @@
 -----------------------------------------------------------
 -- Neovim API aliases
 -----------------------------------------------------------
---local map = vim.api.nvim_set_keymap  -- set global keymap
 local cmd = vim.cmd     				-- execute Vim commands
 local api = vim.api     				-- execute Vim commands
 local fn = vim.fn       				-- call Vim functions
@@ -45,6 +44,7 @@ opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
 opt.swapfile = false          -- don't use swapfile
 opt.scrolloff = 8             -- keep cursor centered vertically on the screen
+opt.laststatus = 3            -- global statusline
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -65,9 +65,8 @@ opt.cursorline = true         -- apply the color set for dark screens
 -- remove whitespace on save
 cmd [[au BufWritePre * :%s/\s\+$//e]]
 
-cmd [[au VimEnter * highlight NeogitNotificationInfo guifg=#83a598]]
-cmd [[au VimEnter * highlight NeogitNotificationWarning guifg=#fe8019]]
-cmd [[au VimEnter * highlight NotificationError guifg=#fb4934]]
+-- Disable MiniStatusLine on NvimTree
+cmd [[autocmd Filetype NvimTree lua vim.b.ministatusline_disable = true]]
 
 -----------------------------------------------------------
 -- Memory, CPU

@@ -5,26 +5,22 @@
 -- Plugin: mini.nvim
 -- https://github.com/echasnovski/mini.nvim
 
--- Word under cursor
-require('mini.jump').setup()
+local Starter = require('mini.starter')
+local Jump = require('mini.jump')
+local Cursorword = require('mini.cursorword')
+local Bufremove = require('mini.bufremove')
+local Pairs = require('mini.pairs')
+local Comment = require('mini.Comment')
+local tabline = require('mini.tabline')
+-- local Statusline = require('mini.statusline')
+local Surround = require('mini.surround')
 
--- Word under cursor
-require('mini.cursorword').setup()
-
--- Remove buffer
-require('mini.bufremove').setup()
-
--- Autopairs
-require('mini.pairs').setup()
-
--- Fast and familiar per-line code commenting.
-require('mini.comment').setup()
-
--- Fast and familiar per-line code commenting.
-require('mini.tabline').setup()
-
-
-local Statusline = require('mini.statusline')
+Bufremove.setup() -- Remove buffer
+Comment.setup() -- Fast and familiar per-line code commenting.
+Cursorword.setup() -- Word under cursor
+Pairs.setup() -- Autopairs
+Starter.setup() -- startup screen
+tabline.setup() -- Fast and familiar per-line code commenting.
 
 local setup_content = function()
   local mode, mode_hl = Statusline.section_mode({ trunc_width = 120 })
@@ -45,15 +41,14 @@ local setup_content = function()
   })
 end
 
--- Statusline
-Statusline.setup({
-  content = {
-    active = setup_content
-  }
-})
-
--- Fast surround plugin.
-require('mini.surround').setup({
+-- Statusline.setup({
+--   set_vim_settings = false,
+--   content = {
+--     active = setup_content
+--   }
+-- })
+--
+Surround.setup({
   mappings = {
     add = "sa", -- Add surrounding
     delete = "sd", -- Delete surrounding

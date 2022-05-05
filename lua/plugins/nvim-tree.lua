@@ -20,21 +20,21 @@ local lib = require('nvim-tree.lib')
 
 tree.setup({
   open_on_setup = true,
-  update_to_buf_dir = { enable = false },
+  hijack_directories = { enable = false },
   update_cwd = true,
+  disable_netrw = true,
   update_focused_file = {
     enable = true,
     ignore_list = {'.git', 'node_modules', '.cache', 'plugged', '.github'},
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     custom = { '.git', 'node_modules', '.cache', '.bin' },
   },
   view = {
-    auto_resize = true,
     mappings = {
       list = {
-        { key='h'   , action = 'close_node'},
+        { key='h'   , action = 'h'},
         { key='l'   , action = 'edit' },
         { key='o'   , action = 'edit' },
         { key='<cr>', action = 'edit' },

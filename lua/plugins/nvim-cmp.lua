@@ -6,8 +6,8 @@
 -- https://github.com/hrsh7th/nvim-cmpa
 
 
-local cmp = require 'cmp'
-local luasnip = require 'luasnip'
+local cmp = require('cmp')
+local luasnip = require('luasnip')
 
 cmp.setup {
   -- load snippet support
