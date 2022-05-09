@@ -20,24 +20,25 @@ local lib = require('nvim-tree.lib')
 
 tree.setup({
   open_on_setup = true,
-  hijack_directories = { enable = false },
-  update_cwd = true,
   disable_netrw = true,
   update_focused_file = {
     enable = true,
+    update_cwd = true,
     ignore_list = {'.git', 'node_modules', '.cache', 'plugged', '.github'},
   },
   filters = {
-    dotfiles = true,
-    custom = { '.git', 'node_modules', '.cache', '.bin' },
+    dotfiles = false,
+    custom = { "^\\.git$", 'node_modules', '.cache', '.bin' },
+    exclude = { ".gitignore" }
   },
   view = {
+    width = 30,
     mappings = {
       list = {
         { key='h'   , action = 'h'},
         { key='l'   , action = 'edit' },
-        { key='o'   , action = 'edit' },
         { key='<cr>', action = 'edit' },
+        { key='o'   , action = 'system_open' },
         { key='I'   , action = 'toggle_ignored' },
         { key='H'   , action = 'toggle_dotfiles' },
         { key='R'   , action = 'refresh' },
@@ -46,10 +47,12 @@ tree.setup({
       }
     }
   },
-  renderer = {
-    indent_markers = {
-      enable = true
-    }
-  }
+  actions = {
+    open_file = {
+      resize_window = true
+    },
+    change_dir = {
+      restrict_above_cwd = true,
+    },
+  },
 })
-

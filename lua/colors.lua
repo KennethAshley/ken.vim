@@ -32,7 +32,13 @@ hl.common = {
   },
 }
 
-hl.plugins.miniStatuslineModeNormal = {
+hl.plugins.mini = {
+  MiniStatuslineDevinfo = {
+    bg = theme.bg,
+  },
+  MiniStatuslineFilename = {
+    bg = theme.bg,
+  },
   MiniStatuslineModeNormal = {
     fg = theme.bg,
     bg = theme.blue,
@@ -45,8 +51,11 @@ hl.plugins.miniStatuslineModeNormal = {
     fg = theme.bg,
     bg = theme.orange,
   },
+  MiniStatuslineModeCommand = {
+    fg = theme.bg,
+    bg = theme.red,
+  }
 }
-
 
 local function load_sync()
   load_highlights(hl.common)

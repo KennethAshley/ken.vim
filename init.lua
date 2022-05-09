@@ -35,4 +35,3 @@ require('plugins/gitsigns')
 require('plugins/mini')
 require('plugins/project')
 require('plugins/scrollbar')
-

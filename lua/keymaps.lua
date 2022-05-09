@@ -35,7 +35,7 @@ map('n', 'U', '<C-R>', default_opts)
 -- map('n', '<C-BS>', ':bdelete<cr>', default_opts)
 
 -- Clear Search
-map('n', '<leader>c', ':noh<cr>', default_opts)
+-- map('n', '<CR>', ':noh<CR><CR>', default_opts)
 
 -- Delete buffer
 map('n', '<C-w>', '<cmd>lua MiniBufremove.delete()<cr>', default_opts)

@@ -28,7 +28,8 @@ g.gruvbox_italic_functions = true
 g.gruvbox_transparent = true
 
 g.nvim_tree_git_hl = 1
-g.nvim_tree_add_trailing = 1
+g.nvim_tree_highlight_opened_files = 1
+-- g.nvim_tree_respect_buf_cwd = 1
 
 g.nvim_tree_show_icons = {
   git = 1,
@@ -36,8 +37,6 @@ g.nvim_tree_show_icons = {
   files = 0,
   folder_arrows = 1,
 }
-
-g.nvim_tree_respect_buf_cwd = 1
 
 opt.title = true
 opt.mouse = 'a'               -- enable mouse support
@@ -92,6 +91,9 @@ opt.tabstop = 2           -- 1 tab == 2 spaces
 opt.smartindent = true    -- autoindent new lines
 opt.showtabline = 2       -- always show tabs
 opt.breakindent = true    -- enable break indent
+opt.fillchars = {
+  vert = "▎",
+}
 
 -----------------------------------------------------------
 -- Autocompletion
