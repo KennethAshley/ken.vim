@@ -43,6 +43,12 @@ map('n', '<C-w>', '<cmd>lua MiniBufremove.delete()<cr>', default_opts)
 -- Toggle Nvim-tree
 map('n', '<C-b>', ':NvimTreeToggle<CR>', default_opts)
 
+map('n', '<leader>s', ':%s/<C-R><C-W>//g<left><left>', default_opts)
+
+-- map('n', '<C-k>', '<cmd>lua ken.open()<CR>', default_opts)
+
+map('n', '<leader>m', ':MarkdownPreview<cr>', default_opts)
+
 -- Hlsearch Lens for Neovim
 -- map('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], default_opts)
 -- map('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], default_opts)

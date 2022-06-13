@@ -5,6 +5,6 @@
 -- Plugin: gitsigns.nvim
 -- https://github.com/lewis6991/gitsigns.nvim
 
-require('gitsigns').setup({
-  signcolumn = false,
-})
+local gitsigns = require('gitsigns')
+
+gitsigns.setup()

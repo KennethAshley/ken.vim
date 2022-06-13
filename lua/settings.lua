@@ -38,6 +38,20 @@ g.nvim_tree_show_icons = {
   folder_arrows = 1,
 }
 
+g.vimwiki_list = {
+  {
+    path = '~/Notes',
+    syntax = 'markdown',
+    ext  = '.md',
+  }
+}
+
+g.vimwiki_ext2syntax = {
+  ['.md'] = 'markdown',
+  ['.markdown'] = 'markdown',
+  ['.mdown'] = 'markdown',
+}
+
 opt.title = true
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
@@ -66,6 +80,13 @@ cmd [[au BufWritePre * :%s/\s\+$//e]]
 
 -- Disable MiniStatusLine on NvimTree
 cmd [[autocmd Filetype NvimTree lua vim.b.ministatusline_disable = true]]
+
+cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
 -----------------------------------------------------------
 -- Memory, CPU
